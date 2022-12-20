@@ -1,8 +1,12 @@
 <?php
 
-include_once("assets/includes/cabecalho.php");
+include_once("cabecalho.php");
 
-include_once("assets/includes/menu.php");
+include_once("menu.php");
+
+include_once("DataRequest.php");
+
+$dr = new DataRequest();
 
 ?>
 	<!-- BEGIN CONTENT -->
@@ -68,13 +72,13 @@ include_once("assets/includes/menu.php");
 						</div>
 						<div class="details">
 							<div class="number">
-								 1349
+								<?=$dr->dadosClientes("c")?>
 							</div>
 							<div class="desc">
 								 Clientes
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="javascript:visualizar('clientes')">
 						Visualizar <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -86,13 +90,13 @@ include_once("assets/includes/menu.php");
 						</div>
 						<div class="details">
 							<div class="number">
-								549
+								<?=$dr->dadosUsuarios("c")?>
 							</div>
 							<div class="desc">
 								Usuários
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="javascript:visualizar('usuarios')">
 						Visualizar <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -104,13 +108,13 @@ include_once("assets/includes/menu.php");
 						</div>
 						<div class="details">
 							<div class="number">
-								89
+								<?=$dr->dadosFornecedores("c")?>
 							</div>
 							<div class="desc">
 								Fornecedores
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="javascript:visualizar('fornecedores')">
 						Visualizar <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -124,7 +128,7 @@ include_once("assets/includes/menu.php");
 				<div class="col-md-12">
 					<!-- BEGIN SAMPLE TABLE PORTLET-->
 					<div class="portlet box grey">
-						<div class="portlet-title">
+						<div class="portlet-title" id="tabela_simples_header">
 							<div class="caption">
 								<i class="fa fa-folder-open"></i>Tabela Simples
 							</div>
@@ -248,6 +252,6 @@ include_once("assets/includes/menu.php");
 
 <?php
 
-include_once("assets/includes/rodape.php");
+include_once("rodape.php");
 
 ?>

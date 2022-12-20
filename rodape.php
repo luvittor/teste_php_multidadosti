@@ -34,6 +34,8 @@ jQuery(document).ready(function() {
    Index.init();
 });
 </script>
+<!-- MORE JS -->
+<script src="index.js" type="text/javascript"></script>
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
