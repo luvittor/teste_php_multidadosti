@@ -141,7 +141,7 @@ $dr = new DataRequest();
 						</div>
 						<div class="portlet-body">
 							<div class="table-responsive">
-								<table class="table table-hover">
+								<table class="table table-hover" id="tabela_dados">
 								<thead>
 								<tr>
 									<th>
